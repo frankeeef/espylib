@@ -3,11 +3,10 @@ import requests
 import sys
 import os
 import platform
-import climage               
-from tkinter import * 
-from tkinter import messagebox 
+import climage
 from image import DrawImage
 from PIL import Image
+import tkinter as tk
 
 
 class text:
@@ -200,6 +199,8 @@ def getOS(raw=True):
                 return "MacOS"
     except Exception as e:
         __error(e)
+
+
 
 class messageType:
     info = "info"
