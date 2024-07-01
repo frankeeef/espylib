@@ -1,0 +1,46 @@
+# be prepared for some terrible code
+import tkinter as tk
+window = tk.Tk()
+
+class winpy:
+    class types:
+        text = "text"
+    title = "00"
+    geo = "01"
+    class window:
+        def New(windowset: dict):
+            window.title(windowset[winpy.title])
+            window.geometry(windowset[winpy.geo])
+        def Start():
+            window.mainloop()
+        def Quit():
+            window.destroy()
+        def Package():
+            return
+    class wincontents:
+        def New(type: str, contentsset: dict, pkg):
+            if type == "text":
+                text = contentsset["contents"]
+                label = tk.Label(window, text=str(text))
+                label.pack()
+""" Example usage:
+winpy.window.New(
+    {
+        winpy.title: "Hello",
+        winpy.geo: "500x500"
+    }
+)
+
+winpy.wincontents.New(
+    winpy.types.text, 
+    (
+        {
+            "contents": "Hello! This is a text box using winpy!"
+        }
+    ),
+    winpy.window.Package()
+)
+
+
+winpy.window.Start()
+"""
